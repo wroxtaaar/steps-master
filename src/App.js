@@ -50,8 +50,8 @@ export default function App() {
         <button style={style} onClick={() => {goNext()}}>
           Next
         </button> */}
-            <Button style={style} direction={goback} text="Previous" />
-            <Button style={style} direction={goNext} text="Next" />
+            <Button style={style} direction={goback} text="Previous" > <span>👈</span> Previous </ Button>
+            <Button style={style} direction={goNext} text="Next" > Next <span></span> 👉 </ Button>
           </div>
         </div>
       )}
@@ -59,10 +59,10 @@ export default function App() {
   );
 }
 
-function Button({ style, direction, text }) {
+function Button({ style, direction, children}) {
   return (
     <button style={style} onClick={direction}>
-      {text}
+      {children}
     </button>
   );
 }
