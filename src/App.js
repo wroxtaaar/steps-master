@@ -50,8 +50,16 @@ export default function App() {
         <button style={style} onClick={() => {goNext()}}>
           Next
         </button> */}
-            <Button style={style} direction={goback} text="Previous" > <span>👈</span> Previous </ Button>
-            <Button style={style} direction={goNext} text="Next" > Next <span></span> 👉 </ Button>
+
+        {/* Anything written between these two buttons is called children props, 
+        children is a predefined keyword.  */}
+
+            <Button style={style} direction={goback} text="Previous">
+              <span>👈</span> Previous
+            </Button>
+            <Button style={style} direction={goNext} text="Next">
+              Next <span></span> 👉
+            </Button>
           </div>
         </div>
       )}
@@ -59,7 +67,7 @@ export default function App() {
   );
 }
 
-function Button({ style, direction, children}) {
+function Button({ style, direction, children }) {
   return (
     <button style={style} onClick={direction}>
       {children}
