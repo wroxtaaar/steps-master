@@ -51,7 +51,7 @@ export default function App() {
           Next
         </button> */}
 
-        {/* Anything written between these two buttons is called children props, 
+            {/* Anything written between these two buttons is called children props, 
         children is a predefined keyword.  */}
 
             <Button style={style} direction={goback} text="Previous">
